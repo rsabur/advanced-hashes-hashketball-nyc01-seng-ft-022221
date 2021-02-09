@@ -184,7 +184,6 @@ def player_numbers(team)
     end
     count += 1
   end
-  team
 end
 
 def player_stats(athlete)
