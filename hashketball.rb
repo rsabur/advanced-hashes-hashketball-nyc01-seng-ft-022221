@@ -176,16 +176,16 @@ def player_numbers(team)
   charlotte_numbers = []
   while count < game_hash[:home][:players].length do
     if team == game_hash[:home][:team_name]
-      return game_hash[:home][:players][count][:number]
+      brooklyn_numbers.push(game_hash)[:home][:players][count][:number]
     end
-    brooklyn_numbers.push
+    
     count += 1
   end
   while count < game_hash[:away][:players].length do
     if team == game_hash[:away][:team_name]
-      return game_hash[:away][:players][count][:number]
+      charlotte_numbers.push(game_hash)[:away][:players][count][:number]
     end
-    charlotte_numbers.push
+    
     count += 1
   end
   brooklyn_numbers.flatten
