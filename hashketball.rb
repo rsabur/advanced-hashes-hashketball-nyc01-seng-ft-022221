@@ -188,9 +188,14 @@ end
 
 def player_stats(athlete)
   binding.pry
-  if athlete == game_hash[:home][:players][:player_name]
-    return game_hash[:home][:players]
+  count = 0
+  while count < game_hash[:home][:players].length
+    if athlete == game_hash[:home][:players][count][:player_name]
+      return game_hash[:home][:players][count].shift()
+    elsif athlete == game_hash[:away][:players][count][:player_name]
+      return game_hash[:away][:players][count].shift()
   end
+  count += 1
 end
 
 def big_shoe_rebounds
