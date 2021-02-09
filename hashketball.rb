@@ -176,7 +176,6 @@ def player_numbers(team)
     if team == game_hash[:home][:team_name]
       return game_hash[:home][:players][count][:number]
     end
-
   count += 1
   end
   while count < game_hash[:away][:players].length
@@ -185,6 +184,7 @@ def player_numbers(team)
     end
     count += 1
   end
+  team
 end
 
 def player_stats(athlete)
