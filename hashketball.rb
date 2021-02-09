@@ -177,10 +177,8 @@ def player_numbers(team)
     if team == game_hash[:home][:team_name]
       num = game_hash[:home][:players][count][:number]
     end
-
     count += 1
   end
-  brooklyn_numbers.push(num)
 end
 
 def player_stats(athlete)
