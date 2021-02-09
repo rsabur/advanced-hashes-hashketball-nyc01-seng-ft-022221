@@ -176,7 +176,7 @@ def player_numbers(team)
   charlotte_numbers = []
   if count < game_hash[:home][:players].length
     return game_hash[:home][:players][count][:number]
-    count += 1
+  count += 1
   end
   if count < game_hash[:away][:players].length
     game_hash[:away][:players][count][:number]
