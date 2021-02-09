@@ -204,6 +204,7 @@ def big_shoe_rebounds
   while count < game_hash[:home][:players].length do
     #binding.pry
     if shoe_size < game_hash[:home][:players][count][:shoe]
+      shoe_size = game_hash[:home][:players][count][:shoe]
       rebounds = game_hash[:home][:players][count][:rebounds]
     end
     #binding.pry
