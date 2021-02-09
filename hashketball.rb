@@ -170,11 +170,10 @@ def team_names
 end
 
 def player_numbers(team)
-  binding.pry
-  count = 0
-  if count < game_hash[:home][:players].length
+  #binding.pry
+  if team == game_hash[:home][:players]
     return game_hash[:home][:players][0][:shoe]
-    count += 1
+
   end
 
 end
