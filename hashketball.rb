@@ -185,6 +185,7 @@ def player_numbers(team)
     if team == game_hash[:away][:team_name]
       return game_hash[:away][:players][count][:number]
     end
+    charlotte_numbers.push
     count += 1
   end
 end
