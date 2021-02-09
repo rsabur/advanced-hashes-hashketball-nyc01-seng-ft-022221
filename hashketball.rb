@@ -180,7 +180,7 @@ def player_numbers(team)
   end
   while count < game_hash[:away][:players].length
     if team == game_hash[:away][:team_name]
-      return game_hash[:away][:players][count][:number].join
+      return game_hash[:away][:players][count][:number].join(*)
     end
     count += 1
   end
