@@ -174,13 +174,13 @@ def player_numbers(team)
   count = 0
   while count < game_hash[:home][:players].length
     if team == game_hash[:home][:team_name]
-      return game_hash[:home][:players][count][:number]
+      return game_hash[:home][:players][count][:number].to_a
     end
     count += 1
   end
   while count < game_hash[:away][:players].length
     if team == game_hash[:away][:team_name]
-      return game_hash[:away][:players][count][:number]
+      return game_hash[:away][:players][count][:number].to_a
     end
     count += 1
   end
@@ -188,8 +188,8 @@ end
 
 def player_stats(athlete)
   binding.pry
-  if athlete == players
-    return game_hash[]
+  if athlete == game_hash[:home][:players][:player_name]
+    return game_hash[:home][:players]
   end
 end
 
