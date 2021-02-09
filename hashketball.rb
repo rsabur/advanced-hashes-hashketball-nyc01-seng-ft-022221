@@ -200,4 +200,15 @@ def player_stats(athlete)
 end
 
 def big_shoe_rebounds
+  count = 0
+  shoe_rebounds = 12
+  while count < game_hash[:home][:players].length
+    if max_size < game_hash[:home][:players][count][:shoe]
+      shoe_rebounds = game_hash[:home][:players][count][:rebounds]
+    elsif max_size < game_hash[:away][:players][count][:shoe]
+      shoe_rebounds = game_hash[:away][:players][count][:rebounds]
+    end
+    count += 1
+  end
+  shoe_rebounds
 end
