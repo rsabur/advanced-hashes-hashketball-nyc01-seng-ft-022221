@@ -179,6 +179,7 @@ def player_numbers(team)
       num = game_hash[:home][:players][count][:number]
     end
     brooklyn_numbers.push(num)
+    count += 1
   end
   count += 1
 end
