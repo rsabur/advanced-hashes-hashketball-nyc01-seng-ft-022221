@@ -210,5 +210,5 @@ def big_shoe_rebounds
     end
     count += 1
   end
-  shoe_rebounds
+  puts shoe_rebounds
 end
