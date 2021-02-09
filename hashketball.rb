@@ -179,6 +179,7 @@ def player_numbers(team)
     end
     brooklyn_numbers.push(num)
   end
+  count += 1
 
 end
 
