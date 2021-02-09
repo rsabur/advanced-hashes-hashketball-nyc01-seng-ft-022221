@@ -174,12 +174,14 @@ def player_numbers(team)
   count = 0
   brooklyn_numbers = []
   charlotte_numbers = []
-  if count < game_hash[:home][:players].length
+  while count < game_hash[:home][:players].length
+    if team == game_hash[:home][:players]
     return game_hash[:home][:players][count][:number]
   count += 1
   end
-  if count < game_hash[:away][:players].length
-    game_hash[:away][:players][count][:number]
+  while count < game_hash[:away][:players].length
+    if game_hash[:away][:players].length
+    return game_hash[:away][:players][count][:number]
     count += 1
   end
 end
