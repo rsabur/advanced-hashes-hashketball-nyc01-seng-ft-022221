@@ -201,7 +201,7 @@ end
 
 def big_shoe_rebounds
   count = 0
-  shoe_rebounds = 12
+  shoe_rebounds = 13
   while count < game_hash[:home][:players].length do
     if max_size < game_hash[:home][:players][count][:shoe]
       shoe_rebounds = game_hash[:home][:players][count][:rebounds]
