@@ -191,9 +191,9 @@ def player_stats(athlete)
   count = 0
   while count < game_hash[:home][:players].length
     if athlete == game_hash[:home][:players][count][:player_name]
-      return game_hash[:home][:players][count].shift()
+      return game_hash[:home][:players][count]
     elsif athlete == game_hash[:away][:players][count][:player_name]
-      return game_hash[:away][:players][count].shift()
+      return game_hash[:away][:players][count]
     end
     count += 1
   end
