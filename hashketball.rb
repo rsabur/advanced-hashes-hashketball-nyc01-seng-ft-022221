@@ -178,8 +178,8 @@ def player_numbers(team)
       num = game_hash[:home][:players][count][:number]
       numbers.push(num)
     end
-    if team == game_hash[:home][:team_name]
-      num = game_hash[:home][:players][count][:number]
+    if team == game_hash[:away][:team_name]
+      num = game_hash[:away][:players][count][:number]
       numbers.push(num)
     end
     count += 1
