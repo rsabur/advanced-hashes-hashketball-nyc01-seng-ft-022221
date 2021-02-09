@@ -200,7 +200,7 @@ def player_stats(athlete)
 end
 
 def big_shoe_rebounds
-  binding.pry
+  #binding.pry
   count = 0
   shoe_rebounds = 13
   while count < game_hash[:home][:players].length do
