@@ -175,7 +175,7 @@ def player_numbers(team)
   brooklyn_numbers = []
   charlotte_numbers = []
   if count < game_hash[:home][:players].length
-    return game_hash[:home][:players][0][:number]
+    brooklyn_numbers << game_hash[:home][:players][count][:number]
     count += 1
   end
   if count < game_hash[:home][:players].length
