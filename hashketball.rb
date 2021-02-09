@@ -187,7 +187,7 @@ def player_numbers(team)
 end
 
 def player_stats(athlete)
-  binding.pry
+  #binding.pry
   count = 0
   while count < game_hash[:home][:players].length
     if athlete == game_hash[:home][:players][count][:player_name]
