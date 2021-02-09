@@ -178,14 +178,18 @@ def player_numbers(team)
     if team == game_hash[:home][:team_name]
       return game_hash[:home][:players][count][:number]
     end
+    brooklyn_numbers.push
     count += 1
   end
   while count < game_hash[:away][:players].length do
     if team == game_hash[:away][:team_name]
       return game_hash[:away][:players][count][:number]
     end
+    charlotte_numbers.push
     count += 1
   end
+  brooklyn_numbers.flatten
+  charlotte_numbers.flatten
 end
 
 def player_stats(athlete)
