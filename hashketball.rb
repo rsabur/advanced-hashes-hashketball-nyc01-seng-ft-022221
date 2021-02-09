@@ -186,8 +186,8 @@ def player_numbers(team)
     end
     count += 1
   end
-  brooklyn_numbers.flatten
-  charlotte_numbers.flatten
+  brooklyn_numbers
+  charlotte_numbers
 end
 
 def player_stats(athlete)
