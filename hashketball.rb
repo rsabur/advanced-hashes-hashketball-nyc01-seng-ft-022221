@@ -173,7 +173,6 @@ def player_numbers(team)
   #binding.pry
   if team == game_hash[:home][:players]
     return game_hash[:home][:players][0][:shoe]
-
   end
 
 end
