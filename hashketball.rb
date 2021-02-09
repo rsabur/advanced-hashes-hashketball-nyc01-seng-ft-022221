@@ -201,6 +201,7 @@ def big_shoe_rebounds
   count = 0
   shoe_rebounds = 13
   while count < game_hash[:home][:players].length do
+    binding.pry
     if shoe_rebounds < game_hash[:home][:players][count][:shoe]
       shoe_rebounds = game_hash[:home][:players][count][:rebounds]
     elsif shoe_rebounds < game_hash[:away][:players][count][:shoe]
