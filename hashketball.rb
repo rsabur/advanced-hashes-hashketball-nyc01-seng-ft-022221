@@ -178,8 +178,8 @@ def player_numbers(team)
       jersey_num = game_hash[:home][:players][count][:number]
     end
     count += 1
-    brooklyn_numbers.push(jersey_num)
   end
+  brooklyn_numbers.push(jersey_num)
 end
 
 def player_stats(athlete)
