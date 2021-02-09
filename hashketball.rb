@@ -181,7 +181,7 @@ def player_numbers(team)
   count += 1
   end
   while count < game_hash[:away][:players].length
-    if game_hash[:away][:team_name]
+    if team == game_hash[:away][:team_name]
       charlotte_numbers << game_hash[:away][:players][count][:number]
     end
     count += 1
