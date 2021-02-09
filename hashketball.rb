@@ -170,7 +170,7 @@ def team_names
 end
 
 def player_numbers(team)
-  #binding.pry
+  binding.pry
   count = 0
   brooklyn_numbers = []
   charlotte_numbers = []
