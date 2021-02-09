@@ -172,13 +172,13 @@ end
 def player_numbers(team)
   #binding.pry
   count = 0
-  while count < game_hash[:home][:players].length
+  while count < game_hash[:home][:players].length do
     if team == game_hash[:home][:team_name]
       return game_hash[:home][:players][count][:number]
     end
   count += 1
   end
-  while count < game_hash[:away][:players].length
+  while count < game_hash[:away][:players].length do
     if team == game_hash[:away][:team_name]
       return game_hash[:away][:players][count][:number]
     end
