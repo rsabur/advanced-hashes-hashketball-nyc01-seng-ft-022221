@@ -177,10 +177,10 @@ def player_numbers(team)
     if team == game_hash[:home][:team_name]
       num = game_hash[:home][:players][count][:number]
     end
-    brooklyn_numbers.push(num).sort
+    brooklyn_numbers.push(num)
     count += 1
   end
-  brooklyn_numbers
+  brooklyn_numbers.sort
 end
 
 def player_stats(athlete)
