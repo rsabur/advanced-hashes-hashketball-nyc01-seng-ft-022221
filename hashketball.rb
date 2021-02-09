@@ -171,10 +171,16 @@ end
 
 def player_numbers(team)
   binding.pry
-  if team == game_hash[:home][:players]
+  count = 0
+  brooklyn_numbers = []
+  charlotte_numbers = []
+  if count < game_hash[:home][:players].length
     return game_hash[:home][:players][0][:number]
+    count += 1
   end
-
+  if count < game_hash[:home][:players].length
+    return game_hash[:home][:players][0][:number]
+    count += 1
 end
 
 def player_stats(athlete)
