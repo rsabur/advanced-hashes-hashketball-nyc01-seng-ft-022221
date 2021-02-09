@@ -175,7 +175,7 @@ def player_numbers(team)
   brooklyn_numbers = []
   while count < game_hash[:home][:players].length
     if team == game_hash[:home][:team_name]
-      brooklyn_numbers = game_hash[:home][:players][count][:number]
+      brooklyn_numbers.push = game_hash[:home][:players][count][:number]
     end
 
     count += 1
