@@ -172,22 +172,18 @@ end
 def player_numbers(team)
   #binding.pry
   count = 0
-  brooklyn_numbers = []
-  charlotte_numbers = []
   while count < game_hash[:home][:players].length
     if team == game_hash[:home][:team_name]
-      brooklyn_numbers = game_hash[:home][:players][count][:number]
+      game_hash[:home][:players][count][:number]
     end
   count += 1
   end
   while count < game_hash[:away][:players].length
     if team == game_hash[:away][:team_name]
-      charlotte_numbers = game_hash[:away][:players][count][:number]
+      game_hash[:away][:players][count][:number]
     end
     count += 1
   end
-  brooklyn_numbers
-  charlotte_numbers
 end
 
 def player_stats(athlete)
