@@ -178,8 +178,8 @@ def player_numbers(team)
     brooklyn_numbers << game_hash[:home][:players][count][:number]
     count += 1
   end
-  if count < game_hash[:home][:players].length
-    return game_hash[:home][:players][0][:number]
+  if count < game_hash[:away][:players].length
+    charlotte_numbers << game_hash[:away][:players][count][:number]
     count += 1
 end
 
