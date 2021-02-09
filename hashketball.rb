@@ -187,7 +187,8 @@ def player_numbers(team)
 end
 
 def player_stats(athlete)
-  #binding.pry
+  binding.pry
+
 end
 
 def big_shoe_rebounds
