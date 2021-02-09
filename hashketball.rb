@@ -1,4 +1,6 @@
 # Write your code below game_hash
+require 'pry'
+
 def game_hash
   {
     home: {
@@ -127,3 +129,94 @@ def game_hash
 end
 
 # Write code here
+def players
+  players = game_hash.keys.map do |location|
+    game_hash[location][:players]
+  end
+  players.flatten
+end
+
+def num_points_scored(player_name)
+  found_player = players.find do |player_hash|
+    player_hash[:player_name] == player_name
+  end
+  found_player[:points]
+end
+
+
+def shoe_size(player_name)
+  found_shoes = players.find do |player_hash|
+    player_hash[:player_name] == player_name
+  end
+  found_shoes[:shoe]
+end
+
+
+def team_colors(team_name)
+  #binding.pry
+    if team_name == game_hash[:home][:team_name]
+      return game_hash[:home][:colors]
+    end
+    if team_name == game_hash[:away][:team_name]
+      return game_hash[:away][:colors]
+    end
+end
+
+def team_names
+  team = game_hash.keys.map do |location|
+    game_hash[location][:team_name]
+  end
+  team.flatten
+end
+
+def player_numbers(team)
+  #binding.pry
+  count = 0
+  numbers = []
+  while count < game_hash[:home][:players].length
+    if team == game_hash[:home][:team_name]
+      num = game_hash[:home][:players][count][:number]
+      numbers.push(num)
+    end
+    if team == game_hash[:away][:team_name]
+      num = game_hash[:away][:players][count][:number]
+      numbers.push(num)
+    end
+    count += 1
+  end
+  numbers.sort
+end
+
+def player_stats(athlete)
+  #binding.pry
+  count = 0
+  while count < game_hash[:home][:players].length
+    if athlete == game_hash[:home][:players][count][:player_name]
+      return game_hash[:home][:players][count]
+    elsif athlete == game_hash[:away][:players][count][:player_name]
+      return game_hash[:away][:players][count]
+    end
+    count += 1
+  end
+end
+
+def big_shoe_rebounds
+  #binding.pry
+  count = 0
+  shoe_size = 0
+  rebounds = 0
+  while count < game_hash[:home][:players].length do
+    #binding.pry
+    if shoe_size < game_hash[:home][:players][count][:shoe]
+      shoe_size = game_hash[:home][:players][count][:shoe]
+      rebounds = game_hash[:home][:players][count][:rebounds]
+    end
+    #binding.pry
+    if shoe_size < game_hash[:away][:players][count][:shoe]
+      shoe_size = game_hash[:away][:players][count][:shoe]
+      rebounds = game_hash[:away][:players][count][:rebounds]
+    end
+    count += 1
+  end
+  rebounds
+end
