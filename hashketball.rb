@@ -176,16 +176,18 @@ def player_numbers(team)
   charlotte_numbers = []
   while count < game_hash[:home][:players].length
     if team == game_hash[:home][:team_name]
-      return game_hash[:home][:players][count][:number]
+      brooklyn_numbers << game_hash[:home][:players][count][:number]
     end
   count += 1
   end
   while count < game_hash[:away][:players].length
     if game_hash[:away][:team_name]
-      return game_hash[:away][:players][count][:number]
+      charlotte_numbers << game_hash[:away][:players][count][:number]
     end
     count += 1
   end
+  brooklyn_numbers.flatten
+  charlotte_numbers.flatten
 end
 
 def player_stats(athlete)
